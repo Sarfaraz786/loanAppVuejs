@@ -1,0 +1,173 @@
+// app global css in SCSS form
+
+// Common CSS
+.font-size-12 {
+  font-size: 12px !important;
+}
+.font-size-13 {
+  font-size: 13px !important;
+}
+.font-size-16 {
+  font-size: 16px !important;
+}
+.font-size-25 {
+  font-size: 25px !important;
+}
+.bg-cprimary {
+  background-color: $cprimary !important;
+}
+.bg-cgrey,.cgrey  {
+  background: #EDF3FF !important;
+}
+.text-cprimary {
+  color: $cprimary !important;
+}
+.text-sky, .sky {
+  color: #23CEFD !important;
+}
+.border-radius-8 {
+  border-radius: 8px !important;
+}
+.bordered {
+  border: 1px solid rgba(0,0,0,0.12);
+}
+.font-weight-500 {
+  font-weight: 500!important;
+}
+.q-pa-mg {
+  padding: 20px 20px;
+}
+// Common CSS END
+
+
+.my-menu-link {
+  color: $positive !important;
+  // background: #f2c037;
+}
+
+.full-page {
+  padding: 58px;
+}
+
+// Override SCSS
+.q-hoverable:hover > .q-focus-helper {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+.pire-left-nav {
+  .q-hoverable:hover > .q-focus-helper {
+    background: transparent !important;
+    opacity: 0 !important;
+    color: $positive;
+  }
+  .logo-title {
+    color: $white;
+    opacity: 30%;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .brand-wrap {
+    padding-top: 2rem;
+    padding-left: 2.1rem;
+    padding-bottom: 2rem;
+  }
+  .brand {
+    padding-left: 2.2rem;
+  }
+  .q-item {
+    padding: 30px 46px;
+    color: $white;
+  }
+}
+
+// Card page
+.card-page {
+  .card-header {
+    margin-bottom: 42px;
+    .q-btn.new-card {
+      padding: 3px;
+      font-size: 12px;
+      .q-btn__wrapper {
+        padding: 4px 10px;
+      }
+    }
+  }
+  .q-tab {
+    padding: 0;
+    margin-right: 32px;
+    text-transform: inherit;
+  }
+  .q-tab--active .q-tab__indicator {
+    color: #23CEFD;
+  }
+  .q-tab-panels {
+    padding: 1.5rem 0;
+    .col-md-6 {
+      padding: 0 1.5rem;
+    }
+  }
+
+  .q-card {
+    &.green-card {
+      .holder-name {
+        font-weight: 500;
+      }
+      .card-number {
+        .card-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50px;
+          background: $white;
+        }
+      }
+      .expiry-cvv {
+        font-size: 13px;
+        .cvv {
+          strong {
+            font-size: 24px;
+            vertical-align: middle;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
+  .carousel-option {
+    i {
+      color: $positive;
+      opacity: 20%;
+      font-size: 35px;
+    }
+  }
+  .q-card {
+    &.card-option {
+      .option-icon {
+        width: 17%;
+        text-align: center;
+      }
+    }
+  }
+  .q-expansion-item__container {
+    &:first-child {
+      margin-bottom: 16px;
+    }
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+  }
+  .all-card-trans {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .full-page {
+    padding: 0;
+  }
+  .card-page {
+    .q-tab-panels {
+      .col-md-6  {
+        padding: 0 !important;
+      }
+    }
+  }
+}
